@@ -33,8 +33,8 @@ var server = http.createServer(function (req, res) {
 
 var longShore = http.createClient(80, 'long-shore.com');
 
-server.listen(8080); 
-util.log('Server running at http://127.0.0.1:8080/');
+server.listen(8124); 
+util.log('Server running at http://127.0.0.1:8124/');
 
 
 //Twitter Event Groups
