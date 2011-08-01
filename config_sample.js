@@ -4,7 +4,8 @@ config.twitterNode = {
 	user: "",
 	password: "",
 	action: "filter",
-	track: []
+	track: [],
+	follow: []
 };
 
 config.mongo = {

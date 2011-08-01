@@ -1,9 +1,6 @@
 .DS_Store
 /node_modules
-sample-tweet-json-truncated.js
-sample-tweet-json.js
 config.js
-_config.php
-/public_html/loadtest
 /.svn
 /logs
+.nodemonignore

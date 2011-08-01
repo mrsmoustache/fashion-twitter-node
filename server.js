@@ -5,7 +5,9 @@ var sys = require('sys'),
 	io = require('socket.io'),
 	TwitterNode = require('twitter-node').TwitterNode,
 	config = require('./config'),
-	events = require('./events');
+	events = require('./events'),
+	adjectives = require('./adjectives'),
+	nouns = require('./nouns');
 
 //MongoDB
 var Db = require('mongodb').Db,
@@ -32,9 +34,72 @@ var server = http.createServer(function (req, res) {
 });
 
 var longShore = http.createClient(80, 'long-shore.com');
+var twitterREST = http.createClient(80, 'api.twitter.com');
 
 server.listen(8124); 
 util.log('Server running at http://127.0.0.1:8124/');
+
+//create adjective noun RegExp from imported adjectives module
+var adjNounRegExp = new RegExp('('+adjectives.bigList+' '+adjectives.bigList+' '+nouns+')|('+adjectives.bigList+' '+nouns+' '+nouns+')|('+nouns+' '+nouns+')|('+adjectives.bigList+' '+nouns+')', 'gi');
+
+var colorRegExp = new RegExp (adjectives.colorPattern, 'gi');
+
+
+var spanishFilter = /\b(de|la|que|y|el|los|se|un|las|del|por|con|una|es|lo|para|su|al|como|mas|pero|le|ha|sus|si|yo|ya|este|porque|muy|todo|cuando|sobre|esta|tambien|entre|ser|mi|dos|habia|nos|anos|tiene|hasta|desde|te|eso|fue|todos|puede|pues|asi|bien|vez|ni|ahora|uno|parte|ese|vida|tiempo|mismo|otro|dia|cada|siempre|hacer|donde|esa|nada|hace|entonces|decir|bueno|otra|esto|despues|ella|mundo|tanto|otros|menos|va|poco|aqui|mucho|usted|estado|estaba|ver|como|aunque|estan|les|tres|antes|gobierno|sido|casa|algo|hombre|pais|dijo|sino|forma|ano|estos|caso|hecho|durante|hoy)\b/gi;
+
+
+//TwitterNode
+var twitterConfig = config.twitterNode;
+var twitterUsernames = 'mrs_moustache';
+var twitterUsersData = {};
+
+function init() {
+	
+	//lookup twitter username IDs to follow
+	//using mrs_moustache public twitter list call fashion
+	//wait for response before configuring and intializing twitterNode
+	
+	var request = twitterREST.request('GET', '/1/lists/members.json?slug=fashion&owner_screen_name=mrs_moustache', {'host': 'api.twitter.com'});
+	request.end();
+	request.on('response', function (response) {
+	
+		if (response.statusCode != 200) {
+			util.log("Error: Unexpected response code " + response.statusCode + " from api.twitter.com");
+			return; // Would be nice to abort the request here
+		}
+		
+		var body = '';
+		
+		response.on('data', function (chunk) {
+			body += chunk;
+		});
+		
+		response.on('end', function(){
+			util.log("Received mrs_moustache fashion list member names");
+			twitterUsersData = JSON.parse(body).users;
+			
+			//build temporary event for fashion list usernames
+			buildFollowersEvent();
+						
+			buildKeywords();
+	
+			createEventRegExp();
+			
+			conifgureTwitterNode();
+			
+			startTwitterNode();
+			
+			
+		});
+	});
+
+}
+
+init();
+
+//Create list of featured twitter usernames to follow
+
+
 
 
 //Twitter Event Groups
@@ -63,25 +128,61 @@ function buildKeywords() {
 	}
 }
 
-buildKeywords();
+function buildFollowersEvent() {
 
-
-//TwitterNode
-var twitterConfig = config.twitterNode;
-
-//Build our track parameter based on groupings
-var trackIndex = 0;
-for (event in events) {
-	var list = events[event].keywords;
-	var count = list.length;
+	events['writers'] = {
+		"name": "Featured",
+		"startTime": new Date("February 10, 2011, 1:00 pm EST"),
+		"duration": 1,
+		"location": "Bryant Park Hotel",
+		"latlng": "40.75356, -73.98367",
+		"keywords": []
+	};
+	
+	var count = twitterUsersData.length;
 	for (var i=0; i<count; i++) {
-		var keyword = list[i];
-		twitterConfig.track[trackIndex] = keyword;
-		trackIndex++;
+	
+		events['writers'].keywords.push(twitterUsersData[i].screen_name);
+		
 	}
 }
 
+
+//build event keyword RegExp
+function createEventRegExp() {
+	for (event in events) {
+		var re = new RegExp('\\b('+events[event].keywords.join('|')+')\\b', 'gi');
+		events[event].regExpFilter = re;
+	}
+}
+
+
+function conifgureTwitterNode() {
+	//Build our track parameter based on groupings
+	var trackIndex = 0;
+	for (event in events) {
+		if (event != "writers") {
+			var list = events[event].keywords;
+			var count = list.length;
+			for (var i=0; i<count; i++) {
+				var keyword = list[i];
+				twitterConfig.track[trackIndex] = keyword;
+				trackIndex++;
+			}
+		}
+	}
+	
+	var count = twitterUsersData.length;
+	for (var i=0; i<count; i++) {
+		var uid = twitterUsersData[i].id;
+		twitterConfig.follow[i] = uid;
+	}
+		
+}
+
+
 function getParentGroup( keyword ) {
+	
 	var parent = '';
 	for (event in events) {
 		var list = events[event].keywords;
@@ -96,170 +197,210 @@ function getParentGroup( keyword ) {
 	return parent;
 }
 
-var socket = io.listen(server), 
-	twitter = new TwitterNode(twitterConfig);
-
-util.log("Connecting to " + host + ":" + port);
-util.log("Connecting to Twitter Streaming API. Username: "+twitterConfig.user);
-
-var db = new Db('tweet-event', new Server(host, port, {}), {native_parser:true});
-
-//store tweet for caching
-db.open(function(err, db) {  //might need to db.close() this somewhere in the future
+function startTwitterNode() {
+	var socket = io.listen(server), 
+		twitter = new TwitterNode(twitterConfig);
 	
-	//remove old collection and start fresh
+	util.log("Connecting to " + host + ":" + port);
+	util.log("Connecting to Twitter Streaming API. Username: "+twitterConfig.user);
 	
+	var db = new Db('tweet-event', new Server(host, port, {}), {native_parser:true});
 	
-	for (event in events) {
-		db.dropCollection(event, function(err, result){
-			
-		});
-	}
-	
-	
-	db.dropCollection('events', function(err, result){
-		sys.puts("dropped events.collection: "+sys.inspect(result));
-	});
-	
-	
-	db.dropCollection('words', function(err, result){
-		sys.puts("dropped events.collection: "+sys.inspect(result));
-	});
-	
-	
-	
-	//initialize event collections with basic model structure
-	
-	db.collection('events', function(err, collection) {
+	//store tweet for caching
+	db.open(function(err, db) {  //might need to db.close() this somewhere in the future
+		
+		//remove old collection and start fresh
+		
+		
+		
 		for (event in events) {
-			var eventName = event;
-			//check if a collection exists for event
-			db.collection(eventName, function(err, collection){
+			db.dropCollection(event, function(err, result){
 				
-				collection.find(function(err, cursor){
-					var event = eventName;
-					cursor.count(function(err, count){
-						var tweetCount = count;
-						var randomColor = (function(h){return '#000000'.substr(0,7-h.length)+h})((~~(Math.random()*(1<<24))).toString(16));
-						var doc = {
-							"keyword": event,
-							"name": events[event].name,
-							"startTime": events[event].startTime,
-							"duration": events[event].duration,
-							"location": events[event].location,
-							"latlng": events[event].latlng,
-							"keywords": events[event].keywords,
-							"tweetCount": tweetCount,
-							"color": randomColor
-						};
-						db.collection('events', function(err, collection) {
-						
-							collection.ensureIndex({startTime: 1}, function(err, indexName){
-								if (err) {
-									util.log("error ensuring index: "+err);
-								} else {
-									//util.log("ensured index: " + indexName);
-								}
-								
-							});
+			});
+		}
+		
+		
+		db.dropCollection('events', function(err, result){
+			sys.puts("dropped events.collection: "+sys.inspect(result));
+		});
+		
+		
+		db.dropCollection('words', function(err, result){
+			sys.puts("dropped events.collection: "+sys.inspect(result));
+		});
+		
+		db.dropCollection('colors', function(err, result){
+			sys.puts("dropped events.collection: "+sys.inspect(result));
+		});
+		
+		
+		
+		
+		
+		//initialize event collections with basic model structure
+		
+		db.collection('events', function(err, collection) {
+			for (event in events) {
+				var eventName = event;
+				//check if a collection exists for event
+				db.collection(eventName, function(err, collection){
+					
+					collection.find(function(err, cursor){
+						var event = eventName;
+						cursor.count(function(err, count){
+							var tweetCount = count;
+							var randomColor = (function(h){return '#000000'.substr(0,7-h.length)+h})((~~(Math.random()*(1<<24))).toString(16));
+							var doc = {
+								"keyword": event,
+								"name": events[event].name,
+								"startTime": events[event].startTime,
+								"duration": events[event].duration,
+								"location": events[event].location,
+								"latlng": events[event].latlng,
+								"keywords": events[event].keywords,
+								"tweetCount": tweetCount,
+								"color": randomColor
+							};
+							db.collection('events', function(err, collection) {
 							
-							collection.find({"keyword": event}, function(err, cursor){
-								cursor.count(function(err, count){
-										db.collection('events', function(err, collection) {
-											collection.update({keyword: event}, doc, {upsert: true});
-										});
+								collection.ensureIndex({startTime: 1}, function(err, indexName){
+									if (err) {
+										util.log("error ensuring index: "+err);
+									} else {
+										//util.log("ensured index: " + indexName);
+									}
+									
+								});
+								
+								collection.find({"keyword": event}, function(err, cursor){
+									cursor.count(function(err, count){
+											db.collection('events', function(err, collection) {
+												collection.update({keyword: event}, doc, {upsert: true});
+											});
+									});
 								});
 							});
 						});
 					});
 				});
-			});
-		}
-	});
-
-	if (err) {
-		sys.puts(err);
-	} else {
+			}
+		});
 	
-		twitter 
-			.addListener('error', function (error) { 
-				util.log (error. message); 
-			}) 
-			.addListener('tweet', function (tweet) {
-							
-				//sort tweets by filters
-				var tweetStr = tweet.text,
-					message = {
-					"keywords": ["default"],
-					"tweet": tweet
-					},
-					match = false,
-					messageSent = false,
-					storeTweet = function( message ) {
-					
-						//a list of less meaningful common words to exclude from textual analysis
-						var wordFilter = /\b(but|get|you|will|are|someone|that|your|have|one|could|know|yes|got|this|live|its|the|and|for|with|them|his|her|they|from|way|can|more|than|follow|how|would|even|dont|cant|not|via|much|ever|when|was|just|done|here|wear|all|wears|put|about|show|news|days|what)\b/i;
-						
-						
-						//splitup tweet into word list
-						var wordList = splitTweet(message.tweet.text);
-						
-						//Store tweets in the proper event collections of our mongodb
-						//startTime, duration, location, tweets
-						for (var i=1; i<message.keywords.length; i++) {
-							var keyword = message.keywords[i];
-							
-							//insert tweets into event collections
-							db.collection(keyword, function(err, collection) {
-								//sys.puts("Inserting tweet in: "+keyword);
-								collection.insert(message.tweet);
+		if (err) {
+			sys.puts(err);
+		} else {
+		
+			twitter 
+				.addListener('error', function (error) { 
+					util.log (error. message); 
+				}) 
+				.addListener('tweet', function (tweet) {
 								
-							});
+					//sort tweets by filters
+					var tweetStr = tweet.text,
+						message = {
+						"keywords": ["default"],
+						"tweet": tweet
+						},
+						match = false,
+						messageSent = false,
+						storeTweet = function( message ) {
+						
+							//remove event designer referenes
+							var tmpStr = tweetStr;
+							for (var i=1; i<message.keywords.length; i++) {
+								var keyword = message.keywords[i];
+								tmpStr = tmpStr.replace(events[keyword].regExpFilter, ' ');
+							} 
 							
-							//update tweetcount in global events collection
-							db.collection('events', function(err, collection){
-								collection.update({"keyword": keyword}, { $inc: {"tweetCount": 1} });
-							});
+						
+							//splitup tweet into word list
+							var wordList = splitTweet(tmpStr);
 							
-							//update words collection
-							//Words Model: { word : 'wordstring', counts : { total : 100, marcjacobs : 60, prada : 40 } }
+							//find color names in tweets
+							var colors = tmpStr.match(colorRegExp);
 							
-							db.collection('words', function(err, collection){
-								var count = wordList.length;
-								for (var i=0; i<count; i++) {
-									var word = wordList[i];
-									if(!wordFilter.test(word)){
+							
+							//Store tweets in the proper event collections of our mongodb
+							//startTime, duration, location, tweets
+							for (var i=1; i<message.keywords.length; i++) {
+								var keyword = message.keywords[i];
+								
+								//insert tweets into event collections
+								db.collection(keyword, function(err, collection) {
+									//sys.puts("Inserting tweet in: "+keyword);
+									collection.insert(message.tweet);
 									
-										var keywords = events[keyword].keywords,
-											length = keywords.length,
-											match = false,
-											pattern = new RegExp(word, "i");
-										
-										for (var j=0; j<length; j++) {
-											if (keywords[j].match(pattern) || word.length < 3) {
-												match = true;
-											}
-										}
-										if (!match) {
+								});
+								
+								//update tweetcount in global events collection
+								db.collection('events', function(err, collection){
+									collection.update({"keyword": keyword}, { $inc: {"tweetCount": 1} });
+								});
+								
+								//update words collection
+								//Words Model: { word : 'wordstring', counts : { total : 100, marcjacobs : 60, prada : 40 } }
+								
+								if (wordList && wordList.length > 0) {
+									//console.log(wordList);
+									db.collection('words', function(err, collection){
+										var count = wordList.length;
+										for (var i=0; i<count; i++) {
+											//trim off any apostrophe 's
+											var word = wordList[i].replace(/('s|')$/, '');
+											
 											var increment = {
 												"counts.total" : 1
 											};
 											increment["counts."+keyword] = 1;
 											collection.update({"word": word}, { $inc: increment }, {upsert: true});
+											
 										}
-									}
+										
+									});
 								}
 								
-							});
-							
+								if (colors) {
+									//console.log(wordList);
+									db.collection('colors', function(err, collection){
+										var count = colors.length;
+										for (var i=0; i<count; i++) {
+											var color = colors[i].toLowerCase();
+											
+											var increment = {
+												"counts.total" : 1
+											};
+											increment["counts."+keyword] = 1;
+											collection.update({"color": color}, { $inc: increment }, {upsert: true});
+											
+										}
+										
+									});
+								}
+								
+							}
+						};
+					
+					//We can turn this off if we want to let in non-english speaking language tweets
+					//Filtering for only lang=en causes excess filtering as some users still write in english from other countries.
+					//if (tweet.user.lang != "en") util.log("non english user detected: "+tweet.user.lang+": "+tweetStr);
+					
+					var spanishTest = tweetStr.match(spanishFilter);
+					if ((spanishTest && spanishTest.length > 1) || tweet.user.lang != "en") { return false; }
+					
+					//Quick check to see if this is a tweet from a featured writer
+					//Todo: need to fix the keyword matching functions below
+					var screenNames = events['writers'].keywords;
+					var screenNameCount = screenNames.length;
+					for (var i=0; i<screenNameCount; i++) {
+						var keyword = new RegExp(screenNames[i], 'i');
+						if (tweetStr.match(keyword) || tweet.user['screen_name'].match(keyword)) {
+							message.keywords.push('writers');
+							match = true;
 						}
-					};
-				
-				//We can turn this off if we want to let in non-english speaking language tweets
-				//Filtering for only lang=en causes excess filtering as some users still write in english from other countries.
-				//if (tweet.user.lang != "en") util.log("non english user detected: "+tweet.user.lang+": "+tweetStr);
-				
-				if (englishTest(tweetStr) && tweet.user.lang == "en") {
+					}
+					
+					//Find Matching Keywords
 					var trackCount = twitterConfig.track.length;
 					for (var i=0; i<trackCount; i++) {
 						var keyword = new RegExp(twitterConfig.track[i], 'i');
@@ -438,21 +579,31 @@ db.open(function(err, db) {  //might need to db.close() this somewhere in the fu
 						}
 					}
 					else util.log("Could not find a matching event: "+tweetStr);
-				} //end of englishTest Check
-								
-			}) 
-			.addListener('limit', function (limit) { 
-				util.log('LIMIT' + sys.inspect(limit)); 
-			}) 
-			.addListener('delete', function (del) { 
-				util.log('DELETE' + sys.inspect(del)); 
-			}) 
-			.addListener('end', function (resp) { 
-				util.log('Twitter API: wave goodbye ...' + resp. statusCode); 
-			}) 
-			.stream();
-	}
-});
+									
+				}) 
+				.addListener('limit', function (limit) { 
+					util.log('LIMIT' + sys.inspect(limit)); 
+				}) 
+				.addListener('delete', function (del) { 
+					util.log('DELETE' + sys.inspect(del));
+					//Todo: look for match of delete string and delete from our DB records as well
+					/*
+					example delete message received
+					{ status: 
+						{ user_id_str: '23776526',
+						 id_str: '95967843740426240',
+						 id: 95967843740426240,
+						 user_id: 23776526 } }
+						 
+						 */
+				}) 
+				.addListener('end', function (resp) { 
+					util.log('Twitter API: wave goodbye ...' + resp. statusCode); 
+				}) 
+				.stream();
+		}
+	});
+}
 
 function broadcastAndStoreTweet (message) {
 	//filter out any tweets that match noise criteria for each keyword
@@ -461,16 +612,6 @@ function broadcastAndStoreTweet (message) {
 	
 	}
 }
-
-function englishTest (tweetStr) {
-	var str = tweetStr;
-	var spanishFilter = /\b(de|la|que|y|el|los|se|un|las|del|por|con|una|es|lo|para|su|al|como|mas|pero|le|ha|sus|si|yo|ya|este|porque|muy|todo|cuando|sobre|esta|tambien|entre|ser|mi|dos|habia|nos|anos|tiene|hasta|desde|te|eso|fue|todos|puede|pues|asi|bien|vez|ni|ahora|uno|parte|ese|vida|tiempo|mismo|otro|dia|cada|siempre|hacer|donde|esa|nada|hace|entonces|decir|bueno|otra|esto|despues|ella|mundo|tanto|otros|menos|va|poco|aqui|mucho|usted|estado|estaba|ver|como|aunque|estan|les|tres|antes|gobierno|sido|casa|algo|hombre|pais|dijo|sino|forma|ano|estos|caso|hecho|durante|hoy)\b/gi;
-	
-	var spanishTest = str.match(spanishFilter);
-
-	if (spanishTest && spanishTest.length > 1) return false;
-	else return true;
-};
 
 function testNoise (message) {
 	var str = message.tweet.text;
@@ -491,8 +632,45 @@ function testNoise (message) {
 }
 
 function splitTweet ( tweetStr ) {
-	var list = [], str = tweetStr, properNames = [];
+	var list = [], str = tweetStr, names = [], phrases = [];
+	//remove double spaces
+	//replace all white spaces with a single white space
+	str = str.replace(/\s+/g, ' ');
+	str = str.replace(/^\s/, '');
 	
+			
+	//save proper nouns as names
+	var names = str.match(/[A-Z][a-z']+[A-Za-z']*(\s[A-Z][a-z']+[A-Za-z']*)+/g);
+	str = str.replace(/[A-Z][a-z']+[A-Za-z']*(\s[A-Z][a-z']+[A-Za-z']*)+/g, ' ');
+	
+	
+	if (names && names.length > 0) {
+		//remove long lists of proper nouns
+		var namesCount = names.length-1;
+		for (var k=namesCount; k>=0; k--) {
+			if (names[k].split(/ /).length > 2) {
+				names.splice(k, 1);
+			}
+		}
+	}
+	
+	//remove double spaces
+	//replace all white spaces with a single white space
+	str = str.replace(/\s+/g, ' ');
+	str = str.replace(/^\s/, '');
+	
+	//console.log(names);
+	
+	//save adjective noun patterns
+	var phrases = str.match(adjNounRegExp);
+	
+			
+	//split str into array list
+	if (names && phrases) list = names.concat(phrases);
+	else if (phrases) list = phrases;
+	else if (names) list = names;
+	
+	/*
 	//remove urls
 	str = str.replace(/http:\/\/\S+/gi, ' ');
 	
@@ -511,6 +689,8 @@ function splitTweet ( tweetStr ) {
 	//save proper names
 	properNames = str.match(/[A-Z][a-z]+(\s[A-Z][a-z]+)+/g);
 	
+	//save adjective-noun combos
+	
 	//strip proper names until later
 	str = str.replace(/[A-Z][a-z]+(\s[A-Z][a-z]+)+/g, ' ');
 	
@@ -521,6 +701,7 @@ function splitTweet ( tweetStr ) {
 	//split str into array list
 	list = str.split(/ /);
 	if (properNames && properNames.length > 0) list = properNames.concat(list);
+	*/
 	
 	return list;
 };
