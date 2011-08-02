@@ -2,6 +2,7 @@ var sys = require('sys'),
 	util = require('util'), 
 	http = require('http'),
 	url = require('url'),
+	email = require('mailer'),
 	io = require('socket.io'),
 	TwitterNode = require('twitter-node').TwitterNode,
 	config = require('./config'),
@@ -88,7 +89,6 @@ function init() {
 			conifgureTwitterNode();
 			
 			startTwitterNode();
-			
 			
 		});
 	});
@@ -598,7 +598,23 @@ function startTwitterNode() {
 						 */
 				}) 
 				.addListener('end', function (resp) { 
-					util.log('Twitter API: wave goodbye ...' + resp. statusCode); 
+					util.log('Twitter API: wave goodbye ...' + resp. statusCode);
+					 email.send({
+						host: config.email.server,
+						port: config.email.port,
+						ssl: config.email.ssl,
+						domain: config.email.server,
+						authentication: "login",
+						username: config.email.username,
+						password: config.email.pass,
+						to : config.email.to,
+						from: config.email.from,
+						subject: "Node Server Twitter Wave Goodbye",
+						body: "The Twitter API has received a response code 200 for acccount "+config.twitterNode.user+"."
+						},
+						function(err, result) {
+							if (err) { util.log(err); }
+						});
 				}) 
 				.stream();
 		}
