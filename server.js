@@ -623,14 +623,6 @@ function startTwitterNode() {
 	});
 }
 
-function broadcastAndStoreTweet (message) {
-	//filter out any tweets that match noise criteria for each keyword
-	var noNoise = testNoise( message );
-	if (noNoise) {
-	
-	}
-}
-
 function testNoise (message) {
 	var str = message.tweet.text;
 	var noiseMatch = false;
