@@ -599,8 +599,12 @@ function startTwitterNode() {
 				}) 
 				.addListener('end', function (resp) {
 					util.log(resp);
-					util.log(resp.responseText); 
-					util.log('Twitter API: wave goodbye ...' + resp.statusCode);
+					//util.log(resp.responseText);
+					for (item in resp) {
+						util.log(item);
+						util.log(resp[item]);
+					}
+					util.log('Twitter API: wave goodbye ...');
 					 email.send({
 						host: config.email.server,
 						port: config.email.port,
