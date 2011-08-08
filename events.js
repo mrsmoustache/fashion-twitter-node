@@ -17,7 +17,7 @@ var events = {
 	},
 	"stevenalan" : {
 		"name": "Steven Alan",
-		"startTime": new Date("February 10, 2011, 9:00 am EST"),
+		"startTime": new Date("February 16, 2011, 9:00 am EST"),
 		"duration": 1,
 		"location": "Pier 59, West Side Hwy",
 		"latlng": "40.74605, -74.00895",
@@ -33,7 +33,7 @@ var events = {
 	},
 	"richardchailove" : {
 		"name": "Richard Chai LOVE",
-		"startTime": new Date("February 10, 2011, 11:00 am EST"),
+		"startTime": new Date("February 17, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Stage",
 		"latlng": "40.75356, -73.98367",
@@ -41,7 +41,7 @@ var events = {
 	},
 	"venacava" : {
 		"name": "Vena Cava",
-		"startTime": new Date("February 10, 2011, 12:00 pm EST"),
+		"startTime": new Date("February 11, 2011, 12:00 pm EST"),
 		"duration": 1,
 		"location": "Milk Studios",
 		"latlng": "40.74290, -74.00702",
@@ -57,7 +57,7 @@ var events = {
 	},
 	"portergrey" : {
 		"name": "Porter Grey",
-		"startTime": new Date("February 10, 2011, 9:30 am EST"),
+		"startTime": new Date("February 11, 2011, 9:30 am EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Box",
 		"latlng": "40.75356, -73.98367",
@@ -65,7 +65,7 @@ var events = {
 	},
 	"christopherraeburnforvictorinox" : {
 		"name": "Christopher Raeburn for Victorinox",
-		"startTime": new Date("February 10, 2011, 10:00 am EST"),
+		"startTime": new Date("February 12, 2011, 10:00 am EST"),
 		"duration": 3,
 		"location": "Eyebeam",
 		"latlng": "40.74716, -74.00719",
@@ -81,7 +81,7 @@ var events = {
 	},
 	"whit" : {
 		"name": "Whit",
-		"startTime": new Date("February 10, 2011, 2:00 pm EST"),
+		"startTime": new Date("February 12, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "Ross Bleckner Studio",
 		"latlng": "40.75020, -74.00354",
@@ -89,7 +89,7 @@ var events = {
 	},
 	"wesgordon" : {
 		"name": "Wes Gordon",
-		"startTime": new Date("February 11, 2011, 2:00 pm EST"),
+		"startTime": new Date("February 12, 2011, 2:00 pm EST"),
 		"duration": 2,
 		"location": "St. Regis",
 		"latlng": "40.76205, -73.97483",
@@ -97,7 +97,7 @@ var events = {
 	},
 	"lucaluca" : {
 		"name": "Luca Luca",
-		"startTime": new Date("February 11, 2011, 3:00 pm EST"),
+		"startTime": new Date("February 12, 2011, 3:00 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Stage",
 		"latlng": "40.75356, -73.98367",
@@ -105,7 +105,7 @@ var events = {
 	},
 	"marahoffman" : {
 		"name": "Mara Hoffman",
-		"startTime": new Date("February 10, 2011, 3:30 pm EST"),
+		"startTime": new Date("February 12, 2011, 3:30 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Box",
 		"latlng": "40.75356, -73.98367",
@@ -113,7 +113,7 @@ var events = {
 	},
 	"mariongobel" : {
 		"name": "Marion Gobel",
-		"startTime": new Date("February 10, 2011, 4:00 pm EST"),
+		"startTime": new Date("February 13, 2011, 4:00 pm EST"),
 		"duration": 1,
 		"location": "Park Avenue Armory",
 		"latlng": "40.76805, -73.96621",
@@ -121,7 +121,7 @@ var events = {
 	},
 	"tadashishoji" : {
 		"name": "Tadashi Shoji",
-		"startTime": new Date("February 10, 2011, 4:00 pm EST"),
+		"startTime": new Date("February 13, 2011, 4:00 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Studio",
 		"latlng": "40.75356, -73.98367",
@@ -129,7 +129,7 @@ var events = {
 	},
 	"hydenyoo" : {
 		"name": "Hyden Yoo",
-		"startTime": new Date("February 10, 2011, 4:00 pm EST"),
+		"startTime": new Date("February 13, 2011, 4:00 pm EST"),
 		"duration": 1.5,
 		"location": "Soho House Library",
 		"latlng": "40.74072, -74.00584",
@@ -137,7 +137,7 @@ var events = {
 	},
 	"rachelcomey" : {
 		"name": "Rachel Comey",
-		"startTime": new Date("February 10, 2011, 5:00 pm EST"),
+		"startTime": new Date("February 13, 2011, 5:00 pm EST"),
 		"duration": 1,
 		"location": "Pier 59",
 		"latlng": "40.74605, -74.00895",
@@ -145,7 +145,7 @@ var events = {
 	},
 	"thevesselbylois" : {
 		"name": "the Vessel. by lois",
-		"startTime": new Date("February 10, 2011, 5:00 pm EST"),
+		"startTime": new Date("February 13, 2011, 5:00 pm EST"),
 		"duration": 2,
 		"location": "526 W 26th St",
 		"latlng": "40.75052, -74.00397",
@@ -153,7 +153,7 @@ var events = {
 	},
 	"alishatrimble" : {
 		"name": "Alisha Trimble",
-		"startTime": new Date("February 10, 2011, 6:00 pm EST"),
+		"startTime": new Date("February 14, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "Wix",
 		"latlng": "40.73927, -73.99279",
@@ -161,7 +161,7 @@ var events = {
 	},
 	"wayne" : {
 		"name": "Wayne",
-		"startTime": new Date("February 10, 2011, 6:00 pm EST"),
+		"startTime": new Date("February 14, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "Milk Studios",
 		"latlng": "40.74290, -74.00702",
@@ -170,7 +170,7 @@ var events = {
 	},
 	"dominiclouis" : {
 		"name": "Dominic Louis",
-		"startTime": new Date("February 10, 2011, 6:00 pm EST"),
+		"startTime": new Date("February 14, 2011, 6:00 pm EST"),
 		"duration": 2,
 		"location": "The Bunker",
 		"latlng": "40.74075, -74.00569",
@@ -178,7 +178,7 @@ var events = {
 	},
 	"katieermilio" : {
 		"name": "Katie Ermilio",
-		"startTime": new Date("February 10, 2011, 6:00 pm EST"),
+		"startTime": new Date("February 14, 2011, 6:00 pm EST"),
 		"duration": 3,
 		"location": "The Bunker",
 		"latlng": "40.72131, -74.00395",
@@ -186,7 +186,7 @@ var events = {
 	},
 	"christiansiriano" : {
 		"name": "Christian Siriano",
-		"startTime": new Date("February 10, 2011, 7:00 pm EST"),
+		"startTime": new Date("February 14, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Stage",
 		"latlng": "40.75356, -73.98367",
@@ -194,7 +194,7 @@ var events = {
 	},
 	"irinashabayeva" : {
 		"name": "Irina Shabayeva",
-		"startTime": new Date("February 10, 2011, 9:00 pm EST"),
+		"startTime": new Date("February 15, 2011, 9:00 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center, the Studio",
 		"latlng": "40.75356, -73.98367",
@@ -202,7 +202,7 @@ var events = {
 	},
 	"timhamilton" : {
 		"name": "Tim Hamilton",
-		"startTime": new Date("February 10, 2011, 9:00 pm EST"),
+		"startTime": new Date("February 15, 2011, 9:00 pm EST"),
 		"duration": 1,
 		"location": "TBA",
 		"latlng": "",
@@ -210,7 +210,7 @@ var events = {
 	},
 	"marcjacobs" : {
 		"name": "Marc Jacobs",
-		"startTime": new Date("February 10, 2011, 3:00 pm EST"),
+		"startTime": new Date("February 15, 2011, 3:00 pm EST"),
 		"duration": 1,
 		"location": "NY State Armory",
 		"latlng": "40.74150, -73.98374",
@@ -226,7 +226,7 @@ var events = {
 	},
 	"oscardelarenta" : {
 		"name" : "Oscar de la Renta",
-		"startTime": new Date("February 10	, 2011, 1:00 pm EST"),
+		"startTime": new Date("February 16	, 2011, 1:00 pm EST"),
 		"duration": 2,
 		"location": "583 Park Ave",
 		"latlng": "40.76577, -73.96779",
@@ -234,7 +234,7 @@ var events = {
 	},
 	"gucci" : {
 		"name" : "Gucci",
-		"startTime": new Date("February 10, 2011, 1:30 pm EST"),
+		"startTime": new Date("February 16, 2011, 1:30 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center",
 		"latlng": "40.764096, -73.983822",
@@ -243,19 +243,11 @@ var events = {
 	},
 	"nyfw" : {
 		"name" : "NYFW",
-		"startTime": new Date("June 20, 2011, 1:00 pm EST"),
+		"startTime": new Date("February 10, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "Lincoln Center",
 		"latlng": "40.776447, -73.98365",
 		"keywords": ["new york fashion week", "ny fashion week", "newyorkfw", "nyfashionweek", "newyorkfashionweek",  "mercedes benz fashion week"]
-	},
-	"ladygaga" : {
-		"name": "Lady Gaga",
-		"startTime": new Date("June 20, 2011, 1:00 pm EST"),
-		"duration": 1,
-		"location": "Lincoln Center",
-		"latlng": "40.776447, -73.98365",
-		"keywords": []
 	}
 };
 

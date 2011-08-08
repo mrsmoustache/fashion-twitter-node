@@ -131,8 +131,8 @@ function buildKeywords() {
 function buildFollowersEvent() {
 
 	events['writers'] = {
-		"name": "Featured",
-		"startTime": new Date("February 10, 2011, 1:00 pm EST"),
+		"name": "Featured Tweeters",
+		"startTime": new Date("February 10, 2011, 8:30 am EST"),
 		"duration": 1,
 		"location": "Bryant Park Hotel",
 		"latlng": "40.75356, -73.98367",
@@ -211,7 +211,7 @@ function startTwitterNode() {
 		
 		//remove old collection and start fresh
 		
-		/*
+		
 		
 		for (event in events) {
 			db.dropCollection(event, function(err, result){
@@ -233,7 +233,7 @@ function startTwitterNode() {
 			sys.puts("dropped events.collection: "+sys.inspect(result));
 		});
 		
-		*/
+		
 		
 		
 		
