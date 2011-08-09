@@ -243,8 +243,8 @@ var events = {
 		"latlng": "40.76577, -73.96779",
 		"keywords": []
 	},
-	"calvinkleincollection" : {
-		"name" : "Calvin Klein Collection",
+	"calvinklein" : {
+		"name" : "Calvin Klein",
 		"startTime": new Date("February 17	, 2011, 1:00 pm EST"),
 		"duration": 2,
 		"location": "583 Park Ave",
