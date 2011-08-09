@@ -598,12 +598,7 @@ function startTwitterNode() {
 						 */
 				}) 
 				.addListener('end', function (resp) {
-					util.log(resp);
 					//util.log(resp.responseText);
-					for (item in resp) {
-						util.log(item);
-						util.log(resp[item]);
-					}
 					util.log('Twitter API: wave goodbye ...');
 					 email.send({
 						host: config.email.server,
@@ -616,7 +611,7 @@ function startTwitterNode() {
 						to : config.email.to,
 						from: config.email.from,
 						subject: "Node Server Twitter Wave Goodbye",
-						body: "The Twitter API has received a response code "+resp.statusCode+" for acccount "+config.twitterNode.user+"."
+						body: "The Twitter API has received a wave goodbye event for acccount "+config.twitterNode.user+"."
 						},
 						function(err, result) {
 							if (err) { util.log(err); }
