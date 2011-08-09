@@ -114,7 +114,7 @@ function buildKeywords() {
 			keywords = events[event].keywords,
 			index = keywords.length;
 			
-		keywords[index] = eventID;
+		if (!events[event].excludeName) keywords[index] = eventID;
 		index++;
 		var matchName = new RegExp(name, 'i');
 		if(!eventID.match(matchName)) {
@@ -211,7 +211,7 @@ function startTwitterNode() {
 		
 		//remove old collection and start fresh
 		
-		/*
+		
 		
 		for (event in events) {
 			db.dropCollection(event, function(err, result){
@@ -233,7 +233,7 @@ function startTwitterNode() {
 			sys.puts("dropped events.collection: "+sys.inspect(result));
 		});
 		
-		*/
+		
 		
 		
 		

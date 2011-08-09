@@ -85,7 +85,9 @@ var events = {
 		"duration": 1,
 		"location": "Ross Bleckner Studio",
 		"latlng": "40.75020, -74.00354",
-		"keywords": []
+		"keywords": ["whit-ny", "whit fashion", "whit ny", "whitney pozgay"],
+		"excludeName" : true
+		
 	},
 	"wesgordon" : {
 		"name": "Wes Gordon",
@@ -165,8 +167,9 @@ var events = {
 		"duration": 1,
 		"location": "Milk Studios",
 		"latlng": "40.74290, -74.00702",
-		"keywords": [],
-		"noise": /\b(mixtape|song|rapper|beat|mane|Gucci(?= Mane)|Gucci(?= Gucci)|"Gucci(?= Gucci")|'Gucci(?= Gucci')|lil(?= wayne)|kanye|lil(?= wayne's)|Bruce(?= Wayne)|fuckin|nigga|dope|shit|str8|lil)\b/gi
+		"keywords": ["wayne fashion", "wayne fall 2011", "wayne spring 2012", "wayne lee"],
+		"noise": /\b(mixtape|song|rapper|beat|mane|Gucci(?= Mane)|Gucci(?= Gucci)|"Gucci(?= Gucci")|'Gucci(?= Gucci')|lil(?= wayne)|kanye|lil(?= wayne's)|Bruce(?= Wayne)|fuckin|nigga|dope|shit|str8|lil)\b/gi,
+		"excludeName" : true
 	},
 	"dominiclouis" : {
 		"name": "Dominic Louis",
@@ -232,14 +235,149 @@ var events = {
 		"latlng": "40.76577, -73.96779",
 		"keywords": []
 	},
-	"gucci" : {
-		"name" : "Gucci",
-		"startTime": new Date("February 16, 2011, 1:30 pm EST"),
-		"duration": 1,
-		"location": "Lincoln Center",
-		"latlng": "40.764096, -73.983822",
-		"keywords": [],
-		"noise": /\b(mixtape|song|rapper|beat|mane|Gucci(?= Mane)|Gucci(?= Gucci)|"Gucci(?= Gucci")|'Gucci(?= Gucci')|lil(?= wayne)|lil(?= wayne's))\b/gi
+	"carolinaherrera" : {
+		"name" : "Carolina Herrera",
+		"startTime": new Date("February 16	, 2011, 1:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"calvinkleincollection" : {
+		"name" : "Calvin Klein Collection",
+		"startTime": new Date("February 17	, 2011, 1:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"dkny" : {
+		"name" : "DKNY",
+		"startTime": new Date("February 17	, 2011, 2:30 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"dianevonfurstenberg" : {
+		"name" : "Diane Von Furstenberg",
+		"startTime": new Date("February 17	, 2011, 9:00 am EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": ["dvf"]
+	},
+	"donnakaran" : {
+		"name" : "Donna Karan",
+		"startTime": new Date("February 16	, 2011, 4:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"helmutlang" : {
+		"name" : "Helmut Lang",
+		"startTime": new Date("February 17	, 2011, 2:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"isaacmizrahi" : {
+		"name" : "Isaac Mizrahi",
+		"startTime": new Date("February 14	, 2011, 2:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"jasonwu" : {
+		"name" : "Jason Wu",
+		"startTime": new Date("February 13	, 2011, 2:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"jeremyscott" : {
+		"name" : "Jeremy Scott",
+		"startTime": new Date("February 12	, 2011, 2:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"naeemkhan" : {
+		"name" : "Naeem Khan",
+		"startTime": new Date("February 14	, 2011, 10:00 am EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"proenzaschouler" : {
+		"name" : "Proenza Schouler",
+		"startTime": new Date("February 16	, 2011, 8:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"viviennetam" : {
+		"name" : "Vivienne Tam",
+		"startTime": new Date("February 11	, 2011, 8:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"ragandbone" : {
+		"name" : "rag & bone",
+		"startTime": new Date("February 12	, 2011, 8:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"threeasfour" : {
+		"name" : "threeASFOUR",
+		"startTime": new Date("February 14	, 2011, 12:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": ["3as4", "3asFour"]
+	},
+	"verawang" : {
+		"name" : "Vera Wang",
+		"startTime": new Date("February 11	, 2011, 5:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"thombrowne" : {
+		"name" : "Thom Browne",
+		"startTime": new Date("February 14	, 2011, 5:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"rebeccataylor" : {
+		"name" : "Rebecca Taylor",
+		"startTime": new Date("February 16	, 2011, 5:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
+	},
+	"jillstuart" : {
+		"name" : "Jill Stuart",
+		"startTime": new Date("February 11	, 2011, 2:00 pm EST"),
+		"duration": 2,
+		"location": "583 Park Ave",
+		"latlng": "40.76577, -73.96779",
+		"keywords": []
 	},
 	"nyfw" : {
 		"name" : "NYFW",
