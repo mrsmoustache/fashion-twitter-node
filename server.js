@@ -295,7 +295,7 @@ function startTwitterNode() {
 					util.log (error. message); 
 				}) 
 				.addListener('tweet', function (tweet) {
-								
+				
 					//sort tweets by filters
 					var tweetStr = tweet.text,
 						message = {
@@ -616,6 +616,11 @@ function startTwitterNode() {
 						function(err, result) {
 							if (err) { util.log(err); }
 						});
+						
+						//wait, then restart stream
+						setTimeout(function(){
+							twitter.stream();
+						}, 30000);
 				}) 
 				.stream();
 		}
