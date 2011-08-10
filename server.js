@@ -211,7 +211,7 @@ function startTwitterNode() {
 		
 		//remove old collection and start fresh
 		
-		/*
+		
 		
 		for (event in events) {
 			db.dropCollection(event, function(err, result){
@@ -233,7 +233,7 @@ function startTwitterNode() {
 			sys.puts("dropped events.collection: "+sys.inspect(result));
 		});
 		
-		*/
+		
 		
 		
 		
@@ -249,7 +249,8 @@ function startTwitterNode() {
 						var event = eventName;
 						cursor.count(function(err, count){
 							var tweetCount = count;
-							var randomColor = (function(h){return '#000000'.substr(0,7-h.length)+h})((~~(Math.random()*(1<<24))).toString(16));
+							//original used 24 and not 23. I changed it to 23 to try and ensure darker colors
+							var randomColor = (function(h){return '#000000'.substr(0,7-h.length)+h})((~~(Math.random()*(1<<23))).toString(16));
 							var doc = {
 								"keyword": event,
 								"name": events[event].name,
