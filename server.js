@@ -212,7 +212,7 @@ function startTwitterNode() {
 		//remove old collection and start fresh
 		
 		
-		
+		/*
 		for (event in events) {
 			db.dropCollection(event, function(err, result){
 				
@@ -232,7 +232,7 @@ function startTwitterNode() {
 		db.dropCollection('colors', function(err, result){
 			sys.puts("dropped events.collection: "+sys.inspect(result));
 		});
-		
+		*/
 		
 		
 		
