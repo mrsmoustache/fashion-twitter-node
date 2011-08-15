@@ -1,5 +1,7 @@
 var config = {};
 
+config.restartDB = false;
+
 config.twitterNode = {
 	user: "",
 	password: "",

@@ -679,8 +679,7 @@ var events = {
 		"duration": 1,
 		"location": "",
 		"latlng": "",
-		"keywords": [],
-		"excludeName": true
+		"keywords": []
 	},
 	"candela" : {
 		"name" : "Candela",

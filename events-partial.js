@@ -1,7 +1,7 @@
 var events = {
 	"naeemkhan" : {
 		"name" : "Naeem Khan",
-		"startTime": new Date("September 15, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 15, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -9,23 +9,16 @@ var events = {
 	},
 	"elenecassis" : {
 		"name" : "Elene Cassis",
-		"startTime": new Date("September 15, 2011, 6:00 pm EDT"),
+		"startTime": new Date("September 15, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"madeinafricabyarisemagazine" : {
-		"name" : "Made In Africa: By Arise Magazine",
-		"startTime": new Date("September 15, 2011, 5:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": ["made in africa by arise magazine"]
-	},
+	
 	"calvinkleincollection" : {
 		"name" : "Calvin Klein Collection",
-		"startTime": new Date("September 15, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 15, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -33,7 +26,7 @@ var events = {
 	},
 	"sergiodavila" : {
 		"name" : "Sergio Davila",
-		"startTime": new Date("September 15, 2011, 12:30 pm EDT"),
+		"startTime": new Date("September 15, 2011, 12:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -41,7 +34,7 @@ var events = {
 	},
 	"guli" : {
 		"name" : "Guli",
-		"startTime": new Date("September 15, 2011, 12:00 pm EDT"),
+		"startTime": new Date("September 15, 2011, 12:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -49,7 +42,7 @@ var events = {
 	},
 	"ralphlauren" : {
 		"name" : "Ralph Lauren",
-		"startTime": new Date("September 15, 2011, 10:00 am EDT"),
+		"startTime": new Date("September 15, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -57,7 +50,7 @@ var events = {
 	},
 	"elietahari" : {
 		"name" : "Elie Tahari",
-		"startTime": new Date("September 14, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 14, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -65,7 +58,7 @@ var events = {
 	},
 	"juancarlosobando" : {
 		"name" : "Juan Carlos Obando",
-		"startTime": new Date("September 14, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 14, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -73,7 +66,7 @@ var events = {
 	},
 	"annasui" : {
 		"name" : "Anna Sui",
-		"startTime": new Date("September 14, 2011, 6:00 pm EDT"),
+		"startTime": new Date("September 14, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -81,7 +74,7 @@ var events = {
 	},
 	"millybymichellesmith" : {
 		"name" : "Milly By Michelle Smith",
-		"startTime": new Date("September 14, 2011, 3:00 pm EDT"),
+		"startTime": new Date("September 14, 2011, 3:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -89,7 +82,7 @@ var events = {
 	},
 	"chadoralphrucci" : {
 		"name" : "Chado Ralph Rucci",
-		"startTime": new Date("September 14, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 14, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -97,7 +90,7 @@ var events = {
 	},
 	"nomia" : {
 		"name" : "Nomia",
-		"startTime": new Date("September 14, 2011, 1:30 pm EDT"),
+		"startTime": new Date("September 14, 2011, 1:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -105,7 +98,7 @@ var events = {
 	},
 	"jmendel" : {
 		"name" : "J.Mendel",
-		"startTime": new Date("September 14, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 14, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -113,7 +106,7 @@ var events = {
 	},
 	"nanettelepore" : {
 		"name" : "Nanette Lepore",
-		"startTime": new Date("September 14, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 14, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -121,7 +114,7 @@ var events = {
 	},
 	"michaelkors" : {
 		"name" : "Michael Kors",
-		"startTime": new Date("September 14, 2011, 10:00 am EDT"),
+		"startTime": new Date("September 14, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -129,7 +122,7 @@ var events = {
 	},
 	"rochambreau" : {
 		"name" : "Rochambeau",
-		"startTime": new Date("September 14, 2011, 9:30 am EDT"),
+		"startTime": new Date("September 14, 2011, 9:30 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -137,7 +130,7 @@ var events = {
 	},
 	"malanbreton" : {
 		"name" : "Malan Breton",
-		"startTime": new Date("September 13, 2011, 9:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 9:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -145,7 +138,7 @@ var events = {
 	},
 	"narcisorodriguez" : {
 		"name" : "Narciso Rodriguez",
-		"startTime": new Date("September 13, 2011, 8:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 8:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -153,7 +146,7 @@ var events = {
 	},
 	"tibi" : {
 		"name" : "Tibi",
-		"startTime": new Date("September 13, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -161,7 +154,7 @@ var events = {
 	},
 	"improvd" : {
 		"name" : "Improvd",
-		"startTime": new Date("September 13, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 13, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -169,7 +162,7 @@ var events = {
 	},
 	"argentinedesigners" : {
 		"name" : "Argentine Designers",
-		"startTime": new Date("September 13, 2011, 3:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 3:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -177,7 +170,7 @@ var events = {
 	},
 	"hervelegerbymaxazria" : {
 		"name" : "Herve Leger by Max Azria",
-		"startTime": new Date("September 13, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -185,7 +178,7 @@ var events = {
 	},
 	"bibhumohapatra" : {
 		"name" : "Bibhu Mohapatra",
-		"startTime": new Date("September 13, 2011, 1:30 pm EDT"),
+		"startTime": new Date("September 13, 2011, 1:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -193,7 +186,7 @@ var events = {
 	},
 	"zangtoi" : {
 		"name" : "Zang Toi",
-		"startTime": new Date("September 13, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -201,7 +194,7 @@ var events = {
 	},
 	"dieselblackgold" : {
 		"name" : "Diesel Black Gold",
-		"startTime": new Date("September 13, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 13, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -209,7 +202,7 @@ var events = {
 	},
 	"verawang" : {
 		"name" : "Vera Wang",
-		"startTime": new Date("September 13, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 13, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -217,7 +210,7 @@ var events = {
 	},
 	"badgleymischka" : {
 		"name" : "Badgley Mischka",
-		"startTime": new Date("September 13, 2011, 10:00 am EDT"),
+		"startTime": new Date("September 13, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -225,7 +218,7 @@ var events = {
 	},
 	"jcrew" : {
 		"name" : "J.Crew",
-		"startTime": new Date("September 13, 2011, 9:30 am EDT"),
+		"startTime": new Date("September 13, 2011, 9:30 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -233,7 +226,7 @@ var events = {
 	},
 	"toryburch" : {
 		"name" : "Tory Burch",
-		"startTime": new Date("September 13, 2011, 9:00 am EDT"),
+		"startTime": new Date("September 13, 2011, 9:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -241,7 +234,7 @@ var events = {
 	},
 	"perryellis" : {
 		"name" : "Perry Ellis",
-		"startTime": new Date("September 12, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -249,7 +242,7 @@ var events = {
 	},
 	"guishem" : {
 		"name" : "Guishem",
-		"startTime": new Date("September 12, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 12, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -257,7 +250,7 @@ var events = {
 	},
 	"betseyjohnson" : {
 		"name" : "Betsey Johnson",
-		"startTime": new Date("September 12, 2011, 6:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -265,7 +258,7 @@ var events = {
 	},
 	"normanambrose" : {
 		"name" : "Norman Ambrose",
-		"startTime": new Date("September 12, 2011, 5:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 5:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -273,23 +266,16 @@ var events = {
 	},
 	"yeohlee" : {
 		"name" : "Yeohlee",
-		"startTime": new Date("September 12, 2011, 4:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 4:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"vlov-qingqingwu" : {
-		"name" : "VLOV-QingQing Wu",
-		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
+	
 	"donnakarannewyork" : {
 		"name" : "Donna Karan New York",
-		"startTime": new Date("September 12, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -297,7 +283,7 @@ var events = {
 	},
 	"pamellaroland" : {
 		"name" : "Pamella Roland",
-		"startTime": new Date("September 12, 2011, 1:30 pm EDT"),
+		"startTime": new Date("September 12, 2011, 1:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -305,7 +291,7 @@ var events = {
 	},
 	"rebeccaminkoff" : {
 		"name" : "Rebecca Minkoff",
-		"startTime": new Date("September 12, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 12, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -313,7 +299,7 @@ var events = {
 	},
 	"carlosmiele" : {
 		"name" : "Carlos Miele",
-		"startTime": new Date("September 12, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 12, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -321,7 +307,7 @@ var events = {
 	},
 	"carolinaherrera" : {
 		"name" : "Carolina Herrera",
-		"startTime": new Date("September 12, 2011, 10:00 am EDT"),
+		"startTime": new Date("September 12, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -329,7 +315,7 @@ var events = {
 	},
 	"callulalillibelle" : {
 		"name" : "Callula Lillibelle",
-		"startTime": new Date("September 12, 2011, 9:30 am EDT"),
+		"startTime": new Date("September 12, 2011, 9:30 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -337,7 +323,7 @@ var events = {
 	},
 	"jennypackham" : {
 		"name" : "Jenny Packham",
-		"startTime": new Date("September 12, 2011, 9:00 am EDT"),
+		"startTime": new Date("September 12, 2011, 9:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -345,7 +331,7 @@ var events = {
 	},
 	"timoweiland" : {
 		"name" : "Timo Weiland",
-		"startTime": new Date("September 11, 2011, 9:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 9:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -353,7 +339,7 @@ var events = {
 	},
 	"tommy hilfiger" : {
 		"name" : "Tommy Hilfiger",
-		"startTime": new Date("September 11, 2011, 8:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 8:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -361,7 +347,7 @@ var events = {
 	},
 	"custobarcelona" : {
 		"name" : "Custo Barcelona",
-		"startTime": new Date("September 11, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -369,7 +355,7 @@ var events = {
 	},
 	"oddmolly" : {
 		"name" : "Odd Molly",
-		"startTime": new Date("September 11, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 11, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -377,7 +363,7 @@ var events = {
 	},
 	"y-3" : {
 		"name" : "Y-3",
-		"startTime": new Date("September 11, 2011, 5:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 5:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -385,7 +371,7 @@ var events = {
 	},
 	"jenkao" : {
 		"name" : "Jen Kao",
-		"startTime": new Date("September 11, 2011, 5:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 5:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -393,7 +379,7 @@ var events = {
 	},
 	"dianevonfurstenberg" : {
 		"name" : "Diane Von Furstenberg",
-		"startTime": new Date("September 11, 2011, 4:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 4:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -401,7 +387,7 @@ var events = {
 	},
 	"l-a-m-b" : {
 		"name" : "L.A.M.B.",
-		"startTime": new Date("September 11, 2011, 2:30 pm EDT"),
+		"startTime": new Date("September 11, 2011, 2:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -409,7 +395,7 @@ var events = {
 	},
 	"tracyreese" : {
 		"name" : "Tracy Reese",
-		"startTime": new Date("September 11, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -417,7 +403,7 @@ var events = {
 	},
 	"dkny" : {
 		"name" : "DKNY",
-		"startTime": new Date("September 11, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -425,7 +411,7 @@ var events = {
 	},
 	"dereklam" : {
 		"name" : "Derek Lam",
-		"startTime": new Date("September 11, 2011, 12:00 pm EDT"),
+		"startTime": new Date("September 11, 2011, 12:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -433,23 +419,16 @@ var events = {
 	},
 	"lelarose" : {
 		"name" : "Lela Rose",
-		"startTime": new Date("September 11, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 11, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"katyaleonovich" : {
-		"name" : "Katya Leonovich",
-		"startTime": new Date("September 11, 2011, 10:30 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
+	
 	"venexiana" : {
 		"name" : "Venexiana",
-		"startTime": new Date("September 10, 2011, 9:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 9:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -457,7 +436,7 @@ var events = {
 	},
 	"evaminge" : {
 		"name" : "Eva Minge",
-		"startTime": new Date("September 10, 2011, 8:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 8:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -465,7 +444,7 @@ var events = {
 	},
 	"moniquelhuillier" : {
 		"name" : "Monique LHuillier",
-		"startTime": new Date("September 10, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -473,7 +452,7 @@ var events = {
 	},
 	"rafaelcennamo" : {
 		"name" : "Rafael Cennamo",
-		"startTime": new Date("September 10, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -481,24 +460,16 @@ var events = {
 	},
 	"charlotteronson" : {
 		"name" : "Charlotte Ronson",
-		"startTime": new Date("September 10, 2011, 6:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"honor" : {
-		"name" : "Honor",
-		"startTime": new Date("September 10, 2011, 4:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": [],
-		"excludeName": true
-	},
+	
 	"farahangsana" : {
 		"name" : "Farah Angsana",
-		"startTime": new Date("September 10, 2011, 3:30 pm EDT"),
+		"startTime": new Date("September 10, 2011, 3:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -506,24 +477,16 @@ var events = {
 	},
 	"viviennetam" : {
 		"name" : "Vivienne Tam",
-		"startTime": new Date("September 10, 2011, 3:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 3:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"adam" : {
-		"name" : "Adam",
-		"startTime": new Date("September 10, 2011, 2:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": [],
-		"excludeName": true
-	},
+	
 	"sonjungwan" : {
 		"name" : "Son Jung Wan",
-		"startTime": new Date("September 10, 2011, 12:00 pm EDT"),
+		"startTime": new Date("September 10, 2011, 12:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -531,7 +494,7 @@ var events = {
 	},
 	"jillstuart" : {
 		"name" : "Jill Stuart",
-		"startTime": new Date("September 10, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 10, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -539,7 +502,7 @@ var events = {
 	},
 	"pinktartan" : {
 		"name" : "Pink Tartan",
-		"startTime": new Date("September 10, 2011, 10:30 am EDT"),
+		"startTime": new Date("September 10, 2011, 10:30 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -547,39 +510,17 @@ var events = {
 	},
 	"lacoste" : {
 		"name" : "Lacoste",
-		"startTime": new Date("September 10, 2011, 10:00 am EDT"),
+		"startTime": new Date("September 10, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"ruffian" : {
-		"name" : "Rufian",
-		"startTime": new Date("September 10, 2011, 9:00 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
-	"falguniandshanepeacock" : {
-		"name" : "Falguni & Shane Peacock",
-		"startTime": new Date("September 9, 2011, 9:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
-	"academyofartuniversity" : {
-		"name" : "Academy of Art University",
-		"startTime": new Date("September 9, 2011, 8:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
+	
+	
 	"cynthiarowley" : {
 		"name" : "Cynthia Rowley",
-		"startTime": new Date("September 9, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 9, 2011, 7:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -587,7 +528,7 @@ var events = {
 	},
 	"conceptkorea" : {
 		"name" : "Concept Korea",
-		"startTime": new Date("September 9, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 9, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -595,7 +536,7 @@ var events = {
 	},
 	"joycioci" : {
 		"name" : "Joy Cioci",
-		"startTime": new Date("September 9, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 9, 2011, 6:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -603,7 +544,7 @@ var events = {
 	},
 	"nicolemiller" : {
 		"name" : "Nicole Miller",
-		"startTime": new Date("September 9, 2011, 6:00 pm EDT"),
+		"startTime": new Date("September 9, 2011, 6:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -611,7 +552,7 @@ var events = {
 	},
 	"tommyhilfigermens" : {
 		"name" : "Tommy Hilfiger Men's",
-		"startTime": new Date("September 9, 2011, 5:30 pm EDT"),
+		"startTime": new Date("September 9, 2011, 5:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -619,7 +560,7 @@ var events = {
 	},
 	"helenyarmak" : {
 		"name" : "Helen Yarmak",
-		"startTime": new Date("September 9, 2011, 5:00 pm EDT"),
+		"startTime": new Date("September 9, 2011, 5:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -627,7 +568,7 @@ var events = {
 	},
 	"marahoffman" : {
 		"name" : "Mara Hoffman",
-		"startTime": new Date("September 9, 2011, 2:30 pm EDT"),
+		"startTime": new Date("September 9, 2011, 2:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -635,23 +576,16 @@ var events = {
 	},
 	"rebeccataylor" : {
 		"name" : "Rebecca Taylor",
-		"startTime": new Date("September 9, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 9, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"generalidea" : {
-		"name" : "General Idea",
-		"startTime": new Date("September 9, 2011, 1:00 pm EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
+	
 	"lucaluca" : {
 		"name" : "Luca Luca",
-		"startTime": new Date("September 9, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 9, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -659,32 +593,17 @@ var events = {
 	},
 	"projectrunway" : {
 		"name" : "Project Runway",
-		"startTime": new Date("September 9, 2011, 9:30 am EDT"),
+		"startTime": new Date("September 9, 2011, 9:30 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
 		"keywords": []
 	},
-	"electricfeathers" : {
-		"name" : "Electric Feathers",
-		"startTime": new Date("September 9, 2011, 9:30 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
-	"emerson" : {
-		"name" : "Emerson",
-		"startTime": new Date("September 9, 2011, 9:00 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": [],
-		"excludeName": true
-	},
+	
+	
 	"candela" : {
 		"name" : "Candela",
-		"startTime": new Date("September 8, 2011, 2:30 pm EDT"),
+		"startTime": new Date("September 8, 2011, 2:30 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -692,7 +611,7 @@ var events = {
 	},
 	"tadashishoji" : {
 		"name" : "Tadashi Shoji",
-		"startTime": new Date("September 8, 2011, 2:00 pm EDT"),
+		"startTime": new Date("September 8, 2011, 2:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -700,7 +619,7 @@ var events = {
 	},
 	"supima" : {
 		"name" : "Supima",
-		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"startTime": new Date("September 8, 2011, 1:00 pm EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -708,7 +627,7 @@ var events = {
 	},
 	"richardchai" : {
 		"name" : "Richard Chai",
-		"startTime": new Date("September 8, 2011, 11:00 am EDT"),
+		"startTime": new Date("September 8, 2011, 11:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -716,23 +635,7 @@ var events = {
 	},
 	"bcbgmaxazria" : {
 		"name" : "BCBGMaxAzria",
-		"startTime": new Date("September 8, 2011, 10:00 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
-	"portergrey" : {
-		"name" : "Porter Grey",
-		"startTime": new Date("September 8, 2011, 9:30 am EDT"),
-		"duration": 1,
-		"location": "",
-		"latlng": "",
-		"keywords": []
-	},
-	"nicholask" : {
-		"name" : "Nicholas K",
-		"startTime": new Date("September 8, 2011, 9:00 am EDT"),
+		"startTime": new Date("September 8, 2011, 10:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -740,7 +643,7 @@ var events = {
 	},
 	"nyfw" : {
 		"name" : "New York Fashion Week",
-		"startTime": new Date("September 8, 2011, 8:30 am EDT"),
+		"startTime": new Date("September 8, 2011, 9:00 am EST"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",

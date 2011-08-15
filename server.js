@@ -45,6 +45,9 @@ var adjNounRegExp = new RegExp('('+adjectives.bigList+' '+adjectives.bigList+' '
 
 var colorRegExp = new RegExp (adjectives.colorPattern, 'gi');
 
+//twitter restart delay
+var restartDelay = 30000;
+
 
 var spanishFilter = /\b(de|la|que|y|el|los|se|un|las|del|por|con|una|es|lo|para|su|al|como|mas|pero|le|ha|sus|si|yo|ya|este|porque|muy|todo|cuando|sobre|esta|tambien|entre|ser|mi|dos|habia|nos|anos|tiene|hasta|desde|te|eso|fue|todos|puede|pues|asi|bien|vez|ni|ahora|uno|parte|ese|vida|tiempo|mismo|otro|dia|cada|siempre|hacer|donde|esa|nada|hace|entonces|decir|bueno|otra|esto|despues|ella|mundo|tanto|otros|menos|va|poco|aqui|mucho|usted|estado|estaba|ver|como|aunque|estan|les|tres|antes|gobierno|sido|casa|algo|hombre|pais|dijo|sino|forma|ano|estos|caso|hecho|durante|hoy)\b/gi;
 
@@ -121,9 +124,12 @@ function buildKeywords() {
 			keywords[index] = name;
 			index++;
 		}
+		//create hyphenated version of name
+		/*
 		if (name.match(/ /g)) {
 			keywords[index] = name.replace(/ /g, '-');
 		}
+		*/
 		
 	}
 }
@@ -132,10 +138,10 @@ function buildFollowersEvent() {
 
 	events['writers'] = {
 		"name": "Featured Tweeters",
-		"startTime": new Date("February 10, 2011, 8:30 am EST"),
+		"startTime": new Date("September 8, 2011, 8:30 am EDT"),
 		"duration": 1,
-		"location": "Bryant Park Hotel",
-		"latlng": "40.75356, -73.98367",
+		"location": "",
+		"latlng": "",
 		"keywords": []
 	};
 	
@@ -211,32 +217,28 @@ function startTwitterNode() {
 		
 		//remove old collection and start fresh
 		
-		
-		/*
-		for (event in events) {
-			db.dropCollection(event, function(err, result){
-				
+		if (config.restartDB) {
+			for (event in events) {
+				db.dropCollection(event, function(err, result){
+					
+				});
+			}
+			
+			db.dropCollection('events', function(err, result){
+				sys.puts("dropped events.collection: "+sys.inspect(result));
 			});
+			
+			
+			db.dropCollection('words', function(err, result){
+				sys.puts("dropped events.collection: "+sys.inspect(result));
+			});
+			
+			db.dropCollection('colors', function(err, result){
+				sys.puts("dropped events.collection: "+sys.inspect(result));
+			});
+
 		}
-		
-		
-		db.dropCollection('events', function(err, result){
-			sys.puts("dropped events.collection: "+sys.inspect(result));
-		});
-		
-		
-		db.dropCollection('words', function(err, result){
-			sys.puts("dropped events.collection: "+sys.inspect(result));
-		});
-		
-		db.dropCollection('colors', function(err, result){
-			sys.puts("dropped events.collection: "+sys.inspect(result));
-		});
-		*/
-		
-		
-		
-		
+				
 		//initialize event collections with basic model structure
 		
 		db.collection('events', function(err, collection) {
@@ -266,7 +268,7 @@ function startTwitterNode() {
 							
 								collection.ensureIndex({startTime: 1}, function(err, indexName){
 									if (err) {
-										util.log("error ensuring index: "+err);
+										util.log("error ensuring starttime index: "+err);
 									} else {
 										//util.log("ensured index: " + indexName);
 									}
@@ -296,7 +298,7 @@ function startTwitterNode() {
 					util.log (error. message); 
 				}) 
 				.addListener('tweet', function (tweet) {
-				
+								
 					//sort tweets by filters
 					var tweetStr = tweet.text,
 						message = {
@@ -621,7 +623,8 @@ function startTwitterNode() {
 						//wait, then restart stream
 						setTimeout(function(){
 							twitter.stream();
-						}, 30000);
+							restartDelay = restartDelay * 2;
+						}, restartDelay);
 				}) 
 				.stream();
 		}
