@@ -298,6 +298,14 @@ function startTwitterNode() {
 					util.log (error. message); 
 				}) 
 				.addListener('tweet', function (tweet) {
+					
+					//Todo: New Twitter Media Entity
+					//if(tweet.entities.media) console.log(tweet.entities.media);
+					
+					//Surveying geo data frequency
+					//if (tweet.geo) console.log(tweet.geo);
+					//if (tweet.coordinates) console.log(tweet.coordinates);
+					//if (tweet.place) console.log(tweet.place);
 								
 					//sort tweets by filters
 					var tweetStr = tweet.text,
