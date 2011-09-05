@@ -351,7 +351,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	"tommy hilfiger" : {
+	"tommyhilfiger" : {
 		"name" : "Tommy Hilfiger",
 		"startTime": new Date("September 11, 2011, 8:00 pm EDT"),
 		"duration": 1,

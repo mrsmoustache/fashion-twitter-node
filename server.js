@@ -68,6 +68,7 @@ function init() {
 	request.on('response', function (response) {
 	
 		if (response.statusCode != 200) {
+			
 			util.log("Error: Unexpected response code " + response.statusCode + " from api.twitter.com");
 			return; // Would be nice to abort the request here
 		}
@@ -220,7 +221,7 @@ function startTwitterNode() {
 		if (config.restartDB) {
 			for (event in events) {
 				db.dropCollection(event, function(err, result){
-					
+					sys.puts("dropped "+event+".collection: "+sys.inspect(result));
 				});
 			}
 			
@@ -230,14 +231,44 @@ function startTwitterNode() {
 			
 			
 			db.dropCollection('words', function(err, result){
-				sys.puts("dropped events.collection: "+sys.inspect(result));
+				sys.puts("dropped words.collection: "+sys.inspect(result));
 			});
 			
 			db.dropCollection('colors', function(err, result){
-				sys.puts("dropped events.collection: "+sys.inspect(result));
+				sys.puts("dropped colors.collection: "+sys.inspect(result));
 			});
 
 		}
+	
+		//initialize global all-designers capped collection
+		db.createCollection("all-designers-item", {'capped':true, 'size':100000}, function(err, collection){
+			if (err) {
+				util.log("error capping collection: "+err);
+			}
+		});
+		
+		//initialize words collection
+		db.collection('words', function(err, collection){
+			collection.ensureIndex({"counts.total": -1}, function(err, indexName){
+				if (err) {
+					util.log("error ensuring counts.total index: "+err);
+				} else {
+					util.log("ensured words collection index: " + indexName);
+				}
+				
+			});
+		});
+		
+		db.collection('colors', function(err, collection){
+			collection.ensureIndex({"counts.total": -1}, function(err, indexName){
+				if (err) {
+					util.log("error ensuring counts.total index: "+err);
+				} else {
+					util.log("ensured colors collection index: " + indexName);
+				}
+				
+			});
+		});
 				
 		//initialize event collections with basic model structure
 		
@@ -331,6 +362,11 @@ function startTwitterNode() {
 							//find color names in tweets
 							var colors = tmpStr.match(colorRegExp);
 							
+							//Store last 10 tweets in globalEvent collection
+							db.collection('all-designers-item', function(err, collection){
+								collection.insert(message.tweet);
+								
+							});
 							
 							//Store tweets in the proper event collections of our mongodb
 							//startTime, duration, location, tweets
@@ -341,6 +377,15 @@ function startTwitterNode() {
 								db.collection(keyword, function(err, collection) {
 									//sys.puts("Inserting tweet in: "+keyword);
 									collection.insert(message.tweet);
+									
+									collection.ensureIndex({"created_at": -1, "entities.urls": 1}, function(err, indexName){
+										if (err) {
+											util.log("error ensuring created_at or entities.urls index: "+err);
+										} else {
+											//util.log("ensured tweets collection index: " + indexName);
+										}
+
+									});
 									
 								});
 								
