@@ -682,6 +682,54 @@ var events = {
 		"keywords": [],
 		"excludeName": true
 	},
+	"tse" : {
+		"name" : "TSE",
+		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"francishendy" : {
+		"name" : "Francis Hendy",
+		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"kevorkkiledjian" : {
+		"name" : "Kevork Kiledjian",
+		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"bowencollection" : {
+		"name" : "Bowen Collection",
+		"startTime": new Date("September 8, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"bess" : {
+		"name" : "Bess",
+		"startTime": new Date("September 8, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"gretchenjones" : {
+		"name" : "Gretchen Jones",
+		"startTime": new Date("September 8, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"candela" : {
 		"name" : "Candela",
 		"startTime": new Date("September 8, 2011, 2:30 pm EDT"),
@@ -698,9 +746,65 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"wesgordon" : {
+		"name" : "Wes Gordon",
+		"startTime": new Date("September 8, 2011, 1:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"maisonette1977" : {
+		"name" : "Maisonette 1977",
+		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"supima" : {
 		"name" : "Supima",
 		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"m-patmos" : {
+		"name" : "M. Patmos",
+		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"kimberlyovitz" : {
+		"name" : "Kimberly Ovitz",
+		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"duckiebrown" : {
+		"name" : "Duckie Brown",
+		"startTime": new Date("September 8, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"rachelantonoff" : {
+		"name" : "Rachel Antonoff",
+		"startTime": new Date("September 8, 2011, 12:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"cushnieetochs" : {
+		"name" : "Cushnie et Ochs",
+		"startTime": new Date("September 8, 2011, 12:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
