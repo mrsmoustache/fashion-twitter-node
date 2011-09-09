@@ -799,8 +799,7 @@ var events = {
 		"duration": 1,
 		"location": "",
 		"latlng": "",
-		"keywords": [],
-		"excludeName": true
+		"keywords": []
 	},
 	"christiancota" : {
 		"name" : "Christian Cota",
@@ -808,8 +807,7 @@ var events = {
 		"duration": 1,
 		"location": "",
 		"latlng": "",
-		"keywords": [],
-		"excludeName": true
+		"keywords": []
 	},
 	"petersom" : {
 		"name" : "Peter Som",
@@ -817,8 +815,7 @@ var events = {
 		"duration": 1,
 		"location": "",
 		"latlng": "",
-		"keywords": [],
-		"excludeName": true
+		"keywords": []
 	},
 	"projectrunway" : {
 		"name" : "Project Runway",
@@ -845,7 +842,7 @@ var events = {
 		"keywords": [],
 		"excludeName": true
 	},
-	/*
+	/*	
 	"tse" : {
 		"name" : "TSE",
 		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
