@@ -601,6 +601,22 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"billyreid" : {
+		"name" : "Billy Reid",
+		"startTime": new Date("September 9, 2011, 6:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"st-john" : {
+		"name" : "St. John",
+		"startTime": new Date("September 9, 2011, 5:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"nicolemiller" : {
 		"name" : "Nicole Miller",
 		"startTime": new Date("September 9, 2011, 6:00 pm EDT"),
@@ -625,9 +641,81 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"ragandbone" : {
+		"name" : "rag & bone",
+		"startTime": new Date("September 9, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"bucklerbyandrewbuckler" : {
+		"name" : "Buckler by Andrew Buckler",
+		"startTime": new Date("September 9, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"doo-ri" : {
+		"name" : "Doo.Ri",
+		"startTime": new Date("September 9, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"paolohernandez" : {
+		"name" : "Paolo Hernandez",
+		"startTime": new Date("September 9, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"nautica" : {
+		"name" : "Nautica",
+		"startTime": new Date("September 9, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"costellotagliapietra" : {
+		"name" : "Costello Tagliapietra",
+		"startTime": new Date("September 9, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"yigalazrouel" : {
+		"name" : "Yigal Azrouel",
+		"startTime": new Date("September 9, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"marahoffman" : {
 		"name" : "Mara Hoffman",
 		"startTime": new Date("September 9, 2011, 2:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"petrou-man" : {
+		"name" : "Petrou\\Man",
+		"startTime": new Date("September 9, 2011, 2:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"mandycoon" : {
+		"name" : "Mandy Coon",
+		"startTime": new Date("September 9, 2011, 2:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -641,9 +729,57 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"rubinandchapelle" : {
+		"name" : "Rubin & Chapelle",
+		"startTime": new Date("September 9, 2011, 1:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"fentonjewelry" : {
+		"name" : "Fenton Jewelry",
+		"startTime": new Date("September 9, 2011, 1:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"generalidea" : {
 		"name" : "General Idea",
 		"startTime": new Date("September 9, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"jasonwu" : {
+		"name" : "Jason Wu",
+		"startTime": new Date("September 9, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"nahm" : {
+		"name" : "Nahm",
+		"startTime": new Date("September 9, 2011, 12:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"unitedbamboo" : {
+		"name" : "United Bamboo",
+		"startTime": new Date("September 9, 2011, 12:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"tessgiberson" : {
+		"name" : "Tess Giberson",
+		"startTime": new Date("September 9, 2011, 11:00 am EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -656,6 +792,33 @@ var events = {
 		"location": "",
 		"latlng": "",
 		"keywords": []
+	},
+	"nonoo" : {
+		"name" : "Nonoo",
+		"startTime": new Date("September 9, 2011, 10:30 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": [],
+		"excludeName": true
+	},
+	"christiancota" : {
+		"name" : "Christian Cota",
+		"startTime": new Date("September 9, 2011, 10:30 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": [],
+		"excludeName": true
+	},
+	"petersom" : {
+		"name" : "Peter Som",
+		"startTime": new Date("September 9, 2011, 10:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": [],
+		"excludeName": true
 	},
 	"projectrunway" : {
 		"name" : "Project Runway",
@@ -682,6 +845,7 @@ var events = {
 		"keywords": [],
 		"excludeName": true
 	},
+	/*
 	"tse" : {
 		"name" : "TSE",
 		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
@@ -841,7 +1005,7 @@ var events = {
 		"location": "",
 		"latlng": "",
 		"keywords": []
-	},
+	},*/
 	"nyfw" : {
 		"name" : "New York Fashion Week",
 		"startTime": new Date("September 8, 2011, 8:30 am EDT"),
