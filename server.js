@@ -238,7 +238,7 @@ function startTwitterNode() {
 				sys.puts("dropped colors.collection: "+sys.inspect(result));
 			});
 
-		}
+		}		
 	
 		//initialize global all-designers capped collection
 		db.createCollection("all-designers-item", {'capped':true, 'size':100000}, function(err, collection){
@@ -376,11 +376,17 @@ function startTwitterNode() {
 								//insert tweets into event collections
 								db.collection(keyword, function(err, collection) {
 									//sys.puts("Inserting tweet in: "+keyword);
-									collection.insert(message.tweet);
-									
-									collection.ensureIndex({"created_at": -1, "entities.urls": 1}, function(err, indexName){
+									collection.insert(message.tweet, function(err, docs) {
 										if (err) {
-											util.log("error ensuring created_at or entities.urls index: "+err);
+											util.log(err);
+										} else {
+											//util.log("inserted: "+docs[0]['created_at']);
+										}
+									});
+									
+									collection.ensureIndex({"entities.urls": 1}, function(err, indexName){
+										if (err) {
+											util.log("error ensuring entities.urls index: "+err);
 										} else {
 											//util.log("ensured tweets collection index: " + indexName);
 										}
