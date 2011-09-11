@@ -249,7 +249,7 @@ var events = {
 	},
 	"guishem" : {
 		"name" : "Guishem",
-		"startTime": new Date("September 12, 2011, 6:30 pm EDT"),
+		"startTime": new Date("September 11, 2011, 6:30 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -359,6 +359,14 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"patrikervell" : {
+		"name" : "Patrik Ervell",
+		"startTime": new Date("September 11, 2011, 7:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"custobarcelona" : {
 		"name" : "Custo Barcelona",
 		"startTime": new Date("September 11, 2011, 7:00 pm EDT"),
@@ -367,9 +375,25 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	"oddmolly" : {
-		"name" : "Odd Molly",
-		"startTime": new Date("September 11, 2011, 6:30 pm EDT"),
+	"zacposen" : {
+		"name" : "Zac Posen",
+		"startTime": new Date("September 11, 2011, 6:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"simonspurr" : {
+		"name" : "Simon Spurr",
+		"startTime": new Date("September 11, 2011, 6:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"thakoon" : {
+		"name" : "Thakoon",
+		"startTime": new Date("September 11, 2011, 6:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -398,6 +422,30 @@ var events = {
 		"location": "",
 		"latlng": "",
 		"keywords": ["dvf"]
+	},
+	"tribunestandardbytawfikmounayer" : {
+		"name" : "Tribune Standard By Tawfik Mounayer",
+		"startTime": new Date("September 11, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"carloscampos" : {
+		"name" : "Carlos Campos",
+		"startTime": new Date("September 11, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"joannamastroianni" : {
+		"name" : "Joanna Mastroianni",
+		"startTime": new Date("September 11, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
 	},
 	"l-a-m-b" : {
 		"name" : "L.A.M.B.",
@@ -721,6 +769,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	/*
 	"rebeccataylor" : {
 		"name" : "Rebecca Taylor",
 		"startTime": new Date("September 9, 2011, 2:00 pm EDT"),
@@ -842,7 +891,7 @@ var events = {
 		"keywords": [],
 		"excludeName": true
 	},
-	/*	
+		
 	"tse" : {
 		"name" : "TSE",
 		"startTime": new Date("September 8, 2011, 5:00 pm EDT"),
