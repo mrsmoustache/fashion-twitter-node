@@ -239,6 +239,22 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"marcbymarcjacobs" : {
+		"name" : "Marc by Marc Jacobs",
+		"startTime": new Date("September 12, 2011, 8:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": ["marc by marc"]
+	},
+	"giulietta" : {
+		"name" : "Giulietta",
+		"startTime": new Date("September 12, 2011, 7:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"perryellis" : {
 		"name" : "Perry Ellis",
 		"startTime": new Date("September 12, 2011, 7:00 pm EDT"),
@@ -247,9 +263,25 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"cynthiasteffe" : {
+		"name" : "Cynthia Steffe",
+		"startTime": new Date("September 11, 2011, 6:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"guishem" : {
 		"name" : "Guishem",
 		"startTime": new Date("September 11, 2011, 6:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"zeroandmariacornejo" : {
+		"name" : "Zero + Maria Cornejo",
+		"startTime": new Date("September 12, 2011, 6:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -271,6 +303,38 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"aliceandolivia" : {
+		"name" : "Alice + Olivia",
+		"startTime": new Date("September 12, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"whit" : {
+		"name" : "Whit",
+		"startTime": new Date("September 12, 2011, 4:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"chrisbenz" : {
+		"name" : "Chris Benz",
+		"startTime": new Date("September 12, 2011, 4:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"alexandreherchcovitch" : {
+		"name" : "Alexandre Herchcovitch",
+		"startTime": new Date("September 12, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"yeohlee" : {
 		"name" : "Yeohlee",
 		"startTime": new Date("September 12, 2011, 4:00 pm EDT"),
@@ -279,8 +343,48 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"michaelbastian" : {
+		"name" : "Michael Bastian",
+		"startTime": new Date("September 12, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"vlov-qingqingwu" : {
 		"name" : "VLOV-QingQing Wu",
+		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"bebeblack" : {
+		"name" : "Bebe Black",
+		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"thombrowne" : {
+		"name" : "Thom Browne",
+		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"rachelzoe" : {
+		"name" : "Rachel Zoe",
+		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"reemacra" : {
+		"name" : "Reem Acra",
 		"startTime": new Date("September 12, 2011, 3:00 pm EDT"),
 		"duration": 1,
 		"location": "",
@@ -303,6 +407,22 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"araks" : {
+		"name" : "Araks",
+		"startTime": new Date("September 12, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"barbaratfank" : {
+		"name" : "Barbara Tfank",
+		"startTime": new Date("September 12, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"rebeccaminkoff" : {
 		"name" : "Rebecca Minkoff",
 		"startTime": new Date("September 12, 2011, 1:00 pm EDT"),
@@ -314,6 +434,38 @@ var events = {
 	"carlosmiele" : {
 		"name" : "Carlos Miele",
 		"startTime": new Date("September 12, 2011, 11:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"ohnetitel" : {
+		"name" : "Ohne Titel",
+		"startTime": new Date("September 12, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"maritheandfrancoisgirbaud" : {
+		"name" : "Marithé + François Girbaud",
+		"startTime": new Date("September 12, 2011, 11:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"preenbythorntonbregazzi" : {
+		"name" : "Preen by Thornton Bregazzi",
+		"startTime": new Date("September 12, 2011, 11:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"rachelroy" : {
+		"name" : "Rachel Roy",
+		"startTime": new Date("September 12, 2011, 10:30 am EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -609,6 +761,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	/*
 	"falguniandshanepeacock" : {
 		"name" : "Falguni & Shane Peacock",
 		"startTime": new Date("September 9, 2011, 9:00 pm EDT"),
@@ -769,7 +922,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	/*
+	
 	"rebeccataylor" : {
 		"name" : "Rebecca Taylor",
 		"startTime": new Date("September 9, 2011, 2:00 pm EDT"),
