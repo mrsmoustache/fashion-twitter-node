@@ -63,7 +63,7 @@ function init() {
 	//using mrs_moustache public twitter list call fashion
 	//wait for response before configuring and intializing twitterNode
 	
-	var request = twitterREST.request('GET', '/1/lists/members.json?slug=myfashion&owner_screen_name=mrs_moustache', {'host': 'api.twitter.com'});
+	var request = twitterREST.request('GET', '/1/lists/members.json?slug=fashiontweeters&owner_screen_name=mrs_moustache', {'host': 'api.twitter.com'});
 	request.end();
 	request.on('response', function (response) {
 	

@@ -135,6 +135,14 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"radbyradhourani" : {
+		"name" : "RAD by Rad Hourani",
+		"startTime": new Date("September 13, 2011, 9:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"malanbreton" : {
 		"name" : "Malan Breton",
 		"startTime": new Date("September 13, 2011, 9:00 pm EDT"),
@@ -151,6 +159,14 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"adetacher" : {
+		"name" : "A Détacher",
+		"startTime": new Date("September 13, 2011, 7:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"tibi" : {
 		"name" : "Tibi",
 		"startTime": new Date("September 13, 2011, 7:00 pm EDT"),
@@ -162,6 +178,30 @@ var events = {
 	"improvd" : {
 		"name" : "Improvd",
 		"startTime": new Date("September 13, 2011, 6:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"oscardelarenta" : {
+		"name" : "Oscar de la Renta",
+		"startTime": new Date("September 13, 2011, 6:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"sophietheallet" : {
+		"name" : "Sophie Theallet",
+		"startTime": new Date("September 13, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"marchesa" : {
+		"name" : "Marchesa",
+		"startTime": new Date("September 13, 2011, 3:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -647,6 +687,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	/*
 	"venexiana" : {
 		"name" : "Venexiana",
 		"startTime": new Date("September 10, 2011, 9:00 pm EDT"),
@@ -761,7 +802,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	/*
+	
 	"falguniandshanepeacock" : {
 		"name" : "Falguni & Shane Peacock",
 		"startTime": new Date("September 9, 2011, 9:00 pm EDT"),
