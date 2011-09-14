@@ -55,6 +55,14 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"proenzaschouler" : {
+		"name" : "Proenza Schouler",
+		"startTime": new Date("September 14, 2011, 8:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"elietahari" : {
 		"name" : "Elie Tahari",
 		"startTime": new Date("September 14, 2011, 7:00 pm EDT"),
@@ -79,6 +87,54 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"julianlouie" : {
+		"name" : "Julian Louie",
+		"startTime": new Date("September 14, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"philosophydialbertaferretti" : {
+		"name" : "Philosophy di Alberta Ferretti",
+		"startTime": new Date("September 14, 2011, 5:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"threeasfour" : {
+		"name" : "threeASFOUR",
+		"startTime": new Date("September 14, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"reedkrakoff" : {
+		"name" : "Reed Krakoff",
+		"startTime": new Date("September 14, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"reedkrakoff" : {
+		"name" : "Reed Krakoff",
+		"startTime": new Date("September 14, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"yigalazrouel" : {
+		"name" : "Yigal Azrouël",
+		"startTime": new Date("September 14, 2011, 3:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"millybymichellesmith" : {
 		"name" : "Milly By Michelle Smith",
 		"startTime": new Date("September 14, 2011, 3:00 pm EDT"),
@@ -87,8 +143,24 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"gantbymichaelbastian" : {
+		"name" : "Gant by Michael Bastian",
+		"startTime": new Date("September 14, 2011, 2:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"chadoralphrucci" : {
 		"name" : "Chado Ralph Rucci",
+		"startTime": new Date("September 14, 2011, 2:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"3-1philliplim" : {
+		"name" : "3.1 Phillip Lim",
 		"startTime": new Date("September 14, 2011, 2:00 pm EDT"),
 		"duration": 1,
 		"location": "",
@@ -111,8 +183,32 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"jeremyscott" : {
+		"name" : "Jeremy Scott",
+		"startTime": new Date("September 14, 2011, 1:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"ports1961" : {
+		"name" : "Ports 1961",
+		"startTime": new Date("September 14, 2011, 12:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"nanettelepore" : {
 		"name" : "Nanette Lepore",
+		"startTime": new Date("September 14, 2011, 11:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"douglashannant" : {
+		"name" : "Douglas Hannant",
 		"startTime": new Date("September 14, 2011, 11:00 am EDT"),
 		"duration": 1,
 		"location": "",
@@ -122,6 +218,14 @@ var events = {
 	"michaelkors" : {
 		"name" : "Michael Kors",
 		"startTime": new Date("September 14, 2011, 10:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"angelsanchez" : {
+		"name" : "Angel Sanchez",
+		"startTime": new Date("September 14, 2011, 9:00 am EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -351,6 +455,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	/*
 	"whit" : {
 		"name" : "Whit",
 		"startTime": new Date("September 12, 2011, 4:30 pm EDT"),
@@ -359,6 +464,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	*/
 	"chrisbenz" : {
 		"name" : "Chris Benz",
 		"startTime": new Date("September 12, 2011, 4:30 pm EDT"),
@@ -527,6 +633,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	/*
 	"jennypackham" : {
 		"name" : "Jenny Packham",
 		"startTime": new Date("September 12, 2011, 9:00 am EDT"),
@@ -687,7 +794,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	/*
+	
 	"venexiana" : {
 		"name" : "Venexiana",
 		"startTime": new Date("September 10, 2011, 9:00 pm EDT"),
