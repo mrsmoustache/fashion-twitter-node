@@ -63,14 +63,16 @@ function init() {
 	//using mrs_moustache public twitter list call fashion
 	//wait for response before configuring and intializing twitterNode
 	//fashiontweeters
-	
-	var request = twitterREST.request('GET', '/1/lists/members.json?slug=myfashion&owner_screen_name=mrs_moustache', {'host': 'api.twitter.com'});
+	//myfashion
+	/*
+	var request = twitterREST.request('GET', '/1/lists/members.json?slug=lastfw&owner_screen_name=mrs_moustache', {'host': 'api.twitter.com'});
 	request.end();
 	request.on('response', function (response) {
 	
 		if (response.statusCode != 200) {
 			
 			util.log("Error: Unexpected response code " + response.statusCode + " from api.twitter.com");
+			console.log(response);
 			return; // Would be nice to abort the request here
 		}
 		
@@ -97,6 +99,18 @@ function init() {
 			
 		});
 	});
+	*/
+	
+	//build temporary event for fashion list usernames
+	buildFollowersEvent();
+				
+	buildKeywords();
+
+	createEventRegExp();
+	
+	conifgureTwitterNode();
+	
+	startTwitterNode();
 
 }
 
@@ -328,6 +342,7 @@ function startTwitterNode() {
 			twitter 
 				.addListener('error', function (error) { 
 					util.log (error. message); 
+					console.log(error);
 				}) 
 				.addListener('tweet', function (tweet) {
 					
@@ -641,7 +656,7 @@ function startTwitterNode() {
 							storeTweet(message);
 						}
 					}
-					else util.log("Could not find a matching event: "+tweetStr);
+					//else util.log("Could not find a matching event: "+tweetStr);
 									
 				}) 
 				.addListener('limit', function (limit) { 

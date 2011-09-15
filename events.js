@@ -1,7 +1,15 @@
 var events = {
+	"marcjacobs" : {
+		"name" : "Marc Jacobs",
+		"startTime": new Date("September 15, 2011, 8:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"naeemkhan" : {
 		"name" : "Naeem Khan",
-		"startTime": new Date("September 15, 2011, 7:00 pm EDT"),
+		"startTime": new Date("September 15, 2011, 4:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -23,9 +31,25 @@ var events = {
 		"latlng": "",
 		"keywords": ["made in africa by arise magazine"]
 	},
+	"stephenburrows" : {
+		"name" : "Stephen Burrows",
+		"startTime": new Date("September 15, 2011, 4:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"calvinkleincollection" : {
 		"name" : "Calvin Klein Collection",
 		"startTime": new Date("September 15, 2011, 2:00 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": ["calvin klein"]
+	},
+	"l-wrenscott" : {
+		"name" : "L'Wren Scott",
+		"startTime": new Date("September 15, 2011, 1:00 pm EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -33,6 +57,14 @@ var events = {
 	},
 	"sergiodavila" : {
 		"name" : "Sergio Davila",
+		"startTime": new Date("September 15, 2011, 12:30 pm EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"billblass" : {
+		"name" : "Bill Blass",
 		"startTime": new Date("September 15, 2011, 12:30 pm EDT"),
 		"duration": 1,
 		"location": "",
@@ -47,9 +79,25 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
+	"slowandsteadywinstherace" : {
+		"name" : "Slow and Steady Wins the Race",
+		"startTime": new Date("September 15, 2011, 11:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
 	"ralphlauren" : {
 		"name" : "Ralph Lauren",
 		"startTime": new Date("September 15, 2011, 10:00 am EDT"),
+		"duration": 1,
+		"location": "",
+		"latlng": "",
+		"keywords": []
+	},
+	"angelsanchez" : {
+		"name" : "Angel Sanchez",
+		"startTime": new Date("September 15, 2011, 9:00 am EDT"),
 		"duration": 1,
 		"location": "",
 		"latlng": "",
@@ -465,6 +513,7 @@ var events = {
 		"keywords": []
 	},
 	*/
+	/*
 	"chrisbenz" : {
 		"name" : "Chris Benz",
 		"startTime": new Date("September 12, 2011, 4:30 pm EDT"),
@@ -633,7 +682,7 @@ var events = {
 		"latlng": "",
 		"keywords": []
 	},
-	/*
+	
 	"jennypackham" : {
 		"name" : "Jenny Packham",
 		"startTime": new Date("September 12, 2011, 9:00 am EDT"),
